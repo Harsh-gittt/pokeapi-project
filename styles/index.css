@@ -13,10 +13,13 @@
     .card {
         background-color: var(--dark);
         padding: 1em;
-        height: 12em;
+        min-height: 15em;
         border-radius: 15px;
         cursor: pointer;
         transition: all 200ms ease;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
 
 
         .id-section {

@@ -26,7 +26,7 @@ function playGame () {
     const alreadyGeneratedIds = [];
 
     gameContent.innerHTML = `<h1>Who's That Pokemon ?</h1><div class="loading">Loading...</div>`
-    
+
     async function generateQuesAndOptions() {
         let pokemonId = getRandomId();
         while(alreadyGeneratedIds.includes(pokemonId)){

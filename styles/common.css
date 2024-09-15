@@ -85,6 +85,10 @@ button , a{
         .close-search-button{
             position: absolute;
             right: 0;
+            
+            i{
+                display: none;
+            }
         }
     }
 
