@@ -62,6 +62,7 @@ body{
             background-color: var(--light);
             color: var(--dark);
             border: none;
+            outline: none;
             font-size: 1.5rem;
 
             i{
@@ -84,24 +85,28 @@ body{
         }
     }
 
-    >button{
+    >a{
         height: 50%;
-        width: 6rem;
-        background-color: white;
-        color: var(--dark);
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 20px;
-        border: none;
-        cursor: pointer;   
-        transition: all 200ms ease;  
-    }
 
-    >button:hover{
-        background-color: #EC1B24;
-        color: var(--light);
-    }
+        button{
+            height: 100%;
+            width: 6rem;
+            background-color: white;
+            color: var(--dark);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            cursor: pointer;   
+            transition: all 200ms ease;
+        }
 
+        button:hover{
+            background-color: #EC1B24;
+            color: var(--light);
+        }
+    }
 }
 
 @media (max-width : 600px) {
