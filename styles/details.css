@@ -97,7 +97,6 @@
                     .pokemon-typing {
                         height: 2em;
                         width: 5em;
-                        background-color: #68AE28;
                         border-radius: 30px;
                         display: flex;
                         justify-content: center;
@@ -181,7 +180,6 @@
                             padding-right: 10px;
                             border-right: 1px solid darkgray;
                             font-size: 0.8rem;
-                            color: #68AE28;
                         }
 
                         .stat-value {
@@ -189,14 +187,13 @@
                         }
 
                         .stat-progress-bar {
+                            overflow: hidden;
                             width: 80%;
                             height: 3px;
                             background-color: rgba(37, 37, 37, 0.89);
 
                             .stat-progress {
-                                width: 45%;
                                 height: 100%;
-                                background-color: #68AE28;
                             }
                         }
 
@@ -214,9 +211,9 @@
 
 @media (max-width: 500px) {
     .pokemon-details{
-        transform: translate(0 , 20%);
+        transform: translate(0 , 20%) !important;
     }
     .pokemon-typing-container{
-        margin-top: 3em;
+        margin-top: 3em !important;
     }
 }

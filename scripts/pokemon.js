@@ -14,4 +14,5 @@ export async function fetchAllPokemonData(allPokemon) {
     }
 }
 
-fetchAllPokemonData();
+
+

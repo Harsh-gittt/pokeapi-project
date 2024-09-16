@@ -105,6 +105,10 @@ function playGame () {
         document.querySelector('.play-again').addEventListener('click', () => {
             playGame();
         });
+
+        document.querySelector('.get-info').addEventListener('click', () => {
+            window.location.href = `details.html?id=${pokemon.id}`;
+        })
     }
     
     function checkForAnswer (option , pokemon) {
