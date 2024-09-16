@@ -1,0 +1,222 @@
+@import url(common.css);
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/back-5.jpg');
+
+    .blur {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.708);
+        backdrop-filter: blur(40px);
+        display: flex;
+
+
+        .card {
+            margin: auto;
+            margin-top: 7vw;
+            max-width: 500px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scrollbar-width: none;
+            border-radius: 20px;
+
+            .header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3em;
+
+                .back-button>a {
+                    text-decoration: none;
+                    color: var(--light);
+                    font-size: 180%;
+                }
+
+                .pokemon-name {
+                    font-size: 1.5rem;
+                }
+
+                .pokemon-id {
+                    font-size: 1rem;
+                }
+            }
+
+            .pokemon-details {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3em;
+                position: relative;
+                transform: translate(0, 25%);
+
+                .arrow {
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+
+                .pokemon-image {
+                    width: 35%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .other-details {
+                background-color: var(--dark);
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2vw;
+                gap: 2em;
+
+                .pokemon-typing-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+                    margin-top: 1.5em;
+
+                    .pokemon-typing {
+                        height: 2em;
+                        width: 5em;
+                        background-color: #68AE28;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                    }
+                }
+
+                .about-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.3em;
+
+                    .about {
+                        font-size: 1.2rem;
+                    }
+
+                    .stats-container {
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .stats {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 33%;
+                            gap: 0.6em;
+
+                            .data {
+                                font-size: 1rem;
+                            }
+
+                            .text {
+                                font-size:o.6rem;
+                            }
+
+                        }
+
+                        .weight,
+                        .height {
+                            border-right: 1px solid darkgray;
+                        }
+
+                    }
+
+                    .about-para {
+                        font-size: 0.8rem;
+                        text-align: center;
+                    }
+                }
+
+                .base-stats-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+
+                    >p {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    .base-stat {
+                        width: 95%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 0.6em;
+
+                        .stat-type {
+                            text-transform: uppercase;
+                            text-align: right;
+                            width: 15%;
+                            padding-right: 10px;
+                            border-right: 1px solid darkgray;
+                            font-size: 0.8rem;
+                            color: #68AE28;
+                        }
+
+                        .stat-value {
+                            font-size: 0.8rem;
+                        }
+
+                        .stat-progress-bar {
+                            width: 80%;
+                            height: 3px;
+                            background-color: rgba(37, 37, 37, 0.89);
+
+                            .stat-progress {
+                                width: 45%;
+                                height: 100%;
+                                background-color: #68AE28;
+                            }
+                        }
+
+
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .pokemon-details{
+        transform: translate(0 , 20%);
+    }
+    .pokemon-typing-container{
+        margin-top: 3em;
+    }
+}

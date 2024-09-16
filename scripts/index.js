@@ -12,7 +12,7 @@ function generateHtml(allPokemon) {
 
     allPokemon.forEach((pokemon) => {
         html += `
-            <div class="card">
+            <div class="card" data-pokemon-Id="${pokemon.id}">
                 <div class="id-section">#${pokemon.id}</div>
                 <div class="image-section">
                     <img src="${pokemon.image1}" alt="">
@@ -21,8 +21,15 @@ function generateHtml(allPokemon) {
             </div>
         `
     });
-    console.log(html);
     cardGrid.innerHTML = html;
+
+    document.querySelectorAll('.card').forEach((card) => {
+        card.addEventListener('click', () => {
+            let pokemonId = card.dataset.pokemonId;
+            console.log(pokemonId);
+            window.location.href = `details.html?id=${pokemonId}`;
+        })
+    })
 }
 
 async function loadPokemon () {
